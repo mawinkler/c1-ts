@@ -24,7 +24,8 @@ data "aws_iam_policy_document" "state_terraform_s3" {
 
   statement {
     sid    = "BlockUserAccessWhoIsNotListedHere"
-    effect = "Deny"
+    # Deny
+    effect = "Allow"
     principals {
       type        = "*"
       identifiers = ["*"]
